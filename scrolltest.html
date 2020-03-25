@@ -74,7 +74,7 @@ layout: plain
                 let height = document.scrollingElement.scrollHeight
                     -document.scrollingElement.clientHeight;
                 let f = window.scrollY/height;
-                let blur = `blur(${Math.round(f*40)/2}px)`
+                let blur = `blur(${Math.round(f*10)/2}px)`
                     + ` grayscale(${Math.round(f*100)}%)`;
                 if (blur != el.style.filter) {
                     el.style.filter = blur;
