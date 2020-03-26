@@ -9,6 +9,8 @@ layout: plain
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+            padding-bottom: 100px;
         }
         #background {
             background-image: url(/assets/background.jpg);
@@ -32,16 +34,22 @@ layout: plain
             margin-left: 60%;
             border-radius: 2px;
             padding: 8ex;
-            transform: translateX(-400%) rotate(-360deg);
-            transition: transform 1s;
+            transform: translateX(-1400px) rotate(-360deg);
+            transform-origin: center center;
+            transition: transform 2s;
         }
         .unshift {
             transform: translateX(0px) rotate(0deg);
         }
+        .away {
+            transform: translateX(700px) rotate(360deg);
+        }
         h1 {
             font-size: 5rem;
+            width: 100%;
             text-align: center;
             font-weight: 900;
+            position: fixed;
         };
     </style>
     <script>
@@ -75,23 +83,31 @@ layout: plain
         // Reads out the scroll position and stores it in the data attribute
         // so we can use it in our stylesheets
         const storeScroll = () => {
-                let el = document.querySelector('#background');
-                if (!el)
-                    return;
-                let height = document.scrollingElement.scrollHeight
-                    -document.scrollingElement.clientHeight;
-                let f = window.scrollY/height;
-                let blur = `blur(${Math.round(f*10)/2}px)`
-                    + ` grayscale(${Math.round(f*100)}%)`;
-                if (blur != el.style.filter) {
-                    el.style.filter = blur;
+            let el = document.querySelector('#background');
+            if (!el)
+                return;
+            let height = document.scrollingElement.scrollHeight
+                -document.scrollingElement.clientHeight;
+            let f = window.scrollY/height;
+            let blur = `blur(${Math.round(f*10)/2}px)`
+                + ` grayscale(${Math.round(f*100)}%)`;
+            if (blur != el.style.filter) {
+                el.style.filter = blur;
+            }
+            document.querySelectorAll('.box').forEach( el => {
+                let cr = el.getBoundingClientRect();
+
+                el.classList.remove('away');
+                if (cr.y+cr.height < window.innerHeight && cr.y > 80) {
+                    el.classList.add('unshift');
                 }
-                document.querySelectorAll('.box:not(.unshift)').forEach( el => {
-                    let cr = el.getBoundingClientRect();
-                    if (cr.y+cr.height < window.innerHeight) {
-                        el.classList.add('unshift');
-                    };
-                });
+                else if ( cr.y < 80 ) {
+                    el.classList.add('away');
+                }
+                else if ( cr.y+ 2 * cr.height > window.innerHeight ) {
+                    el.classList.remove('unshift');
+                }
+            });
         }
 
         // Listen for new scroll events, here we debounce our `storeScroll` function
