@@ -33,6 +33,11 @@ layout: plain
             margin-left: 60%;
             border-radius: 2px;
             padding: 8ex;
+            transform: translateX(-400%) rotate(-360deg);
+            transition: transform 1s;
+        }
+        .unshift {
+            transform: translateX(0px) rotate(0deg);
         }
         h1 {
             font-size: 5rem;
@@ -70,7 +75,9 @@ layout: plain
         // Reads out the scroll position and stores it in the data attribute
         // so we can use it in our stylesheets
         const storeScroll = () => {
-                let el = document.getElementById('background');
+                let el = document.querySelector('#background');
+                if (!el)
+                    return;
                 let height = document.scrollingElement.scrollHeight
                     -document.scrollingElement.clientHeight;
                 let f = window.scrollY/height;
@@ -79,13 +86,25 @@ layout: plain
                 if (blur != el.style.filter) {
                     el.style.filter = blur;
                 }
+                document.querySelectorAll('.box:not(.unshift)').forEach( el => {
+                    let cr = el.getBoundingClientRect();
+                    if (cr.y+cr.height < window.innerHeight) {
+                        el.classList.add('unshift');
+                    };
+                });
         }
 
         // Listen for new scroll events, here we debounce our `storeScroll` function
         document.addEventListener('scroll', debounce(storeScroll), { passive: true });
-
-        // Update scroll position for first time
-        storeScroll();
+        if (document.readyState === 'loading') { 
+            document.addEventListener('DOMContentLoaded', (event) => {
+            // Update scroll position for first time
+                storeScroll();
+            });
+        }
+        else {
+            storeScroll();
+        }
 
 
     </script>
