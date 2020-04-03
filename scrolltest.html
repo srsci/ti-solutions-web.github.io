@@ -39,18 +39,18 @@ layout: plain
             background-image: url(/assets/brain_03-01.png)
         }
         @keyframes bg-2 {
-            from, 25%, 50%, 75%, to {
+            50%, to {
                 opacity: 1;
             }
-            5%, 20%, 55%, 70% {
+            from {
                 opacity: 0;
             }
         }
         @keyframes bg-3 {
-            50%, 75% {
+            to {
                 opacity: 1;
             }
-            from, 45%, 80%, to {
+            from, 50% {
                 opacity: 0;
             }
         }
@@ -128,7 +128,10 @@ layout: plain
             }
         };
 
-
+        // footer
+        // erst am schluss unscharf
+        // iphone
+        
         // Reads out the scroll position and stores it in the data attribute
         // so we can use it in our stylesheets
         const storeScroll = () => {
