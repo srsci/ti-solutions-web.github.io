@@ -5,16 +5,17 @@ layout: plain
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>Scrolltest</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             overflow-x: hidden;
             padding-bottom: 100px;
         }
-        #background {
-            background-image: url(/assets/background.png);
+        .background {
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -25,7 +26,34 @@ layout: plain
             height: 100%;
             z-index: -1;
         }
-
+            
+        #bg-1 {
+            background-image: url(/assets/brain_01-01.png)
+        }
+        #bg-2 {
+            animation-name: bg-2;
+            background-image: url(/assets/brain_02-01.png)
+        }
+        #bg-3 {
+            animation-name: bg-3;
+            background-image: url(/assets/brain_03-01.png)
+        }
+        @keyframes bg-2 {
+            from, 25%, 50%, 75%, to {
+                opacity: 1;
+            }
+            5%, 20%, 55%, 70% {
+                opacity: 0;
+            }
+        }
+        @keyframes bg-3 {
+            50%, 75% {
+                opacity: 1;
+            }
+            from, 45%, 80%, to {
+                opacity: 0;
+            }
+        }
         .box {
             background-color: rgba(255,255,255,0.8);
             box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
@@ -63,7 +91,7 @@ layout: plain
         
         h3 {
             
-            font-family: 'Roboto Slab', serif;
+            font-family: 'Roboto Slab';
             font-weight: 300;
             color: #003366;
         }
@@ -109,14 +137,12 @@ layout: plain
             let height = document.scrollingElement.scrollHeight
                 -document.scrollingElement.clientHeight;
             let f = window.scrollY/height;
-            let blur = `blur(${Math.round(f*10)/2}px)`
-                + ` grayscale(${Math.round(f*100)}%)`;
+            let blur = `blur(${Math.round(f*10)/2}px)`;
             if (blur != el.style.filter) {
                 el.style.filter = blur;
             }
-            document.querySelectorAll('.box').forEach( el => {
+            /* document.querySelectorAll('.box').forEach( el => {
                 let cr = el.getBoundingClientRect();
-/*
                 el.classList.remove('away');
                 if (cr.y+cr.height < window.innerHeight && cr.y > 80) {
                     el.classList.add('unshift');
@@ -127,9 +153,10 @@ layout: plain
                 else if ( cr.y+ 2 * cr.height > window.innerHeight ) {
                     el.classList.remove('unshift');
                 }
-*/
+           
                 
             });
+             */
         }
 
         // Listen for new scroll events, here we debounce our `storeScroll` function
@@ -149,7 +176,9 @@ layout: plain
 </head>
 
 <body>
-    <div id="background"></div>
+    <div class="background" id="bg-1"></div>
+    <div class="background" id="bg-2"></div>
+    <div class="background" id="bg-3"></div>
     <h1>TI Solutions</h1>
     <div id="content">
         <div class="box"><h3>Lorem ipsum</h3> Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
