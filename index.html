@@ -1,0 +1,323 @@
+---
+layout: plain
+---
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Scrolltest</title>
+    {%- seo -%}
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <script src="{{ "/assets/javascript/bootstrap/jquery.min.js" | relative_url }}"></script>
+    <script src="{{ "/assets/javascript/bootstrap/bootstrap.bundle.min.js" | relative_url }}"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            overflow-x: hidden;
+            position: relative;
+            margin-bottom: 170px; /* footer hight */
+        }
+
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+       
+        .footer {
+            position: absolute;
+            height: 150px;
+            padding-top: 20px;
+            width: 100%;
+            /* Vertically center the text there */
+            background-color: #f5f5f5;
+        }
+        .background {
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #logo {
+            top: 4ex;
+            text-align: center;
+            position: fixed;
+        }
+
+        #logo svg {
+            width: 60%;
+            height: auto;
+            color: #003366
+        }
+
+        #bg-1 {
+            background-image: url(/assets/brain_01-01.png)
+        }
+
+        #bg-2 {
+            animation-name: bg-2;
+            background-image: url(/assets/brain_02-01.png)
+        }
+
+        #bg-3 {
+            animation-name: bg-3;
+            background-image: url(/assets/brain_03-01.png)
+        }
+
+        @keyframes bg-2 {
+
+            50%,
+            to {
+                opacity: 1;
+            }
+
+            from {
+                opacity: 0;
+            }
+        }
+
+        @keyframes bg-3 {
+            to {
+                opacity: 1;
+            }
+
+            from,
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .box {
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 2px;
+            padding-bottom: 5ex;
+            padding-top: 1ex;
+            padding-right: 5ex;
+            padding-left: 3ex;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab';
+            font-weight: 300;
+            color: #003366;
+        }
+
+        #content {
+            padding-top: 260px;
+        }
+
+        
+
+    </style>
+    <script>
+
+
+        // The debounce function receives our function as a parameter
+        const debounce = (fn) => {
+
+            // This holds the requestAnimationFrame reference, so we can cancel it if we wish
+            let frame;
+
+            // The debounce function returns a new function that can receive a variable number of arguments
+            return (...params) => {
+
+                // If the frame variable has been defined, clear it now, and queue for next frame
+                if (frame) {
+                    cancelAnimationFrame(frame);
+                }
+
+                // Queue our function call for the next frame
+                frame = requestAnimationFrame(() => {
+
+                    // Call our function and pass any params we received
+                    fn(...params);
+                });
+
+            }
+        };
+
+        // TODO
+
+        // footer
+        // erst am schluss unscharf :check:
+        // side menu mit burger
+        // mobile - zentrierte blocks fuer mobile
+        // total page width limited
+        // background as ccs gradiant
+        // logo in svg :check:
+
+
+        // Reads out the scroll position and stores it in the data attribute
+        // so we can use it in our stylesheets
+        const storeScroll = () => {
+            let height = document.scrollingElement.scrollHeight
+                - document.scrollingElement.clientHeight;
+            let vPos = window.scrollY;
+            let blur = 'none';
+            if (height - vPos < 500) {
+                let f = (500 - height + vPos) / height;
+                blur = `blur(${Math.round(f * 20)}px)`;
+            }
+            let bgs = document.querySelectorAll('.background');
+            bgs.forEach(el => {
+                if (blur != el.style.filter) {
+                    el.style.filter = blur;
+                }
+            });
+            /* document.querySelectorAll('.box').forEach( el => {
+                let cr = el.getBoundingClientRect();
+                el.classList.remove('away');
+                if (cr.y+cr.height < window.innerHeight && cr.y > 80) {
+                    el.classList.add('unshift');
+                }
+                else if ( cr.y < 80 ) {
+                    el.classList.add('away');
+                }
+                else if ( cr.y+ 2 * cr.height > window.innerHeight ) {
+                    el.classList.remove('unshift');
+                }
+           
+                
+            });
+             */
+        }
+
+        // Listen for new scroll events, here we debounce our `storeScroll` function
+        document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', (event) => {
+                // Update scroll position for first time
+                storeScroll();
+            });
+        }
+        else {
+            storeScroll();
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="background" id="bg-1"></div>
+    <div class="background" id="bg-2"></div>
+    <div class="background" id="bg-3"></div>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-md-6" id="logo">
+                <svg fill="none" fill-rule="evenodd" stroke="black" stroke-width="0.501" stroke-linejoin="bevel"
+                    stroke-miterlimit="10" style="font-variant-ligatures:none"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    overflow="visible" width="194.124pt" height="48.714pt" viewBox="0.734 -49.869 194.124 48.714">
+                    <g id="Layer 1" transform="scale(1 -1)">
+                        <g id="Group" fill-rule="nonzero" stroke-linejoin="miter" stroke="none" stroke-width="0.845">
+                            <path
+                                d="M 10.537,49.869 L 20.061,49.869 L 29.873,40.025 L 20.028,40.025 L 20.086,30.298 L 10.647,40.025 Z"
+                                fill="currentColor" marker-start="none" marker-end="none" />
+                            <path
+                                d="M 0.734,11.071 L 0.734,20.595 L 10.579,30.415 L 10.579,20.571 L 20.306,20.63 L 10.579,11.19 Z"
+                                fill="currentColor" marker-start="none" marker-end="none" />
+                            <path
+                                d="M 39.413,1.185 L 29.889,1.185 L 20.07,11.03 L 29.914,11.03 L 29.855,20.757 L 39.296,11.03 Z"
+                                fill="currentColor" marker-start="none" marker-end="none" />
+                            <path
+                                d="M 49.411,40.083 L 49.411,30.559 L 39.565,20.749 L 39.565,30.593 L 29.83,30.533 L 39.565,39.974 Z"
+                                fill="currentColor" marker-start="none" marker-end="none" />
+                            <text xml:space="preserve" transform="translate(55.545 1.616) scale(1 -1)" kerning="0"
+                                font-size="28" fill="currentColor">
+                                <tspan x="0" y="0" font-family="Roboto">TI Solution</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="container">
+        <div class="row mb-5">
+            <div class="col offset-md-6 col-md-6 box">
+                <h3>Lorem ipsum</h3> Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore
+                et dolore magna aliqua.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque
+                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                beatae vitae
+                dicta sunt explicabo.
+            </div>
+        </div>
+
+        <div class="row  mb-5">
+            <div class="col offset-md-6 col-md-6 box">
+                <h3>At vero eos et accusamus</h3>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+                tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat
+                facere
+                possimus, omnis voluptas assumenda est, omnis dolor repellendus. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+        <div class="row  mb-5">
+            <div class="col offset-md-6 col-md-6 box">
+                <h3>Quis autem vel eum</h3>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu
+                fugiat nulla pariatur.
+            </div>
+        </div>
+        <div class="row  mb-5">
+            <div class="col offset-md-6 col-md-6 box">
+                <h3>Ut enim ad minima veniam</h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                officia
+                deserunt mollit anim id est laborum.
+            </div>
+        </div>
+        <div class="row  mb-5">
+            <div class="col offset-md-6 col-md-6 box">
+                <h3>Nam libero tempore</h3>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
+                dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+            </div>
+        </div>
+        <div class="row  mb-5">
+            <div class="col offset-md-6 col-md-6 box">
+                <h3>Temporibus autem quibusdam</h3>gugugs
+            </div>
+        </div>
+        <div class="row  mb-5">
+            <div class="col offset-md-6 col-md-6 box">
+                <h3>Lorem ipsum</h3>gugugs
+            </div>
+        </div>
+        <div class="row  mb-5">
+            <div class="col offset-md-6 col-md-6 box">
+                <h3>Lorem ipsum</h3>gugugs
+            </div>
+        </div>
+    </div>
+    <footer class="footer text-muted">
+        <div class="container">
+            <div class="row md-5">
+                <div class="col">
+                    Place sticky footer content here
+                </div>
+                <div class="col">
+                    Place sticky footer content here
+                </div>
+                <div class="col">
+                    Place sticky footer content here
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
