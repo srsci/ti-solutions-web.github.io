@@ -11,6 +11,7 @@ layout: plain
             font-family: 'Roboto', sans-serif;
             overflow-x: hidden;
             padding-bottom: 100px;
+            position: relative;
         }
         .background {
             animation-duration: 5s;
@@ -26,7 +27,17 @@ layout: plain
             height: 100%;
             z-index: -1;
         }
-            
+        #logo {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+        }
+        #logo svg {
+            width:100%;
+            max-width: 600px;
+            height: auto;
+            color: #003366
+        }
         #bg-1 {
             background-image: url(/assets/brain_01-01.png)
         }
@@ -131,12 +142,12 @@ layout: plain
         // TODO
 
         // footer
-        // erst am schluss unscharf
+        // erst am schluss unscharf :check:
         // side menu mit burger
         // mobile - zentrierte blocks fuer mobile
         // total page width limited
         // background as ccs gradiant
-        // logo in svg
+        // logo in svg :check:
         
 
         // Reads out the scroll position and stores it in the data attribute
@@ -144,8 +155,12 @@ layout: plain
         const storeScroll = () => {
             let height = document.scrollingElement.scrollHeight
                 -document.scrollingElement.clientHeight;
-            let f = window.scrollY/height;
-            let blur = `blur(${Math.round(f*10)/2}px)`;
+            let vPos = window.scrollY;
+            let blur = 'none';
+            if (height - vPos < 500){
+                let f = (500 - height + vPos)/height;
+                blur = `blur(${Math.round(f*20)}px)`;
+            }
             let bgs = document.querySelectorAll('.background');
             bgs.forEach(el => {
                 if (blur != el.style.filter) {
@@ -190,7 +205,19 @@ layout: plain
     <div class="background" id="bg-1"></div>
     <div class="background" id="bg-2"></div>
     <div class="background" id="bg-3"></div>
-    <h1>TI Solutions</h1>
+    <div id="logo">
+        <svg fill="none" fill-rule="evenodd" stroke="black" stroke-width="0.501" stroke-linejoin="bevel" stroke-miterlimit="10" font-size="16" style="font-variant-ligatures:none" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" overflow="visible" width="194.124pt" height="48.714pt" viewBox="0.734 -49.869 194.124 48.714">
+        <g id="Layer 1" transform="scale(1 -1)">
+         <g id="Group" fill-rule="nonzero" stroke-linejoin="miter" stroke="none" stroke-width="0.845">
+          <path d="M 10.537,49.869 L 20.061,49.869 L 29.873,40.025 L 20.028,40.025 L 20.086,30.298 L 10.647,40.025 Z" fill="currentColor" marker-start="none" marker-end="none"/>
+          <path d="M 0.734,11.071 L 0.734,20.595 L 10.579,30.415 L 10.579,20.571 L 20.306,20.63 L 10.579,11.19 Z" fill="currentColor" marker-start="none" marker-end="none"/>
+          <path d="M 39.413,1.185 L 29.889,1.185 L 20.07,11.03 L 29.914,11.03 L 29.855,20.757 L 39.296,11.03 Z" fill="currentColor" marker-start="none" marker-end="none"/>
+          <path d="M 49.411,40.083 L 49.411,30.559 L 39.565,20.749 L 39.565,30.593 L 29.83,30.533 L 39.565,39.974 Z" fill="currentColor" marker-start="none" marker-end="none"/>
+          <text xml:space="preserve" transform="translate(55.545 1.616) scale(1 -1)" kerning="0" font-size="30.423" fill="currentColor"><tspan x="0" y="0" font-family="Roboto">TI Solution</tspan></text>
+         </g>
+        </g>
+       </svg>
+    </div>
     <div id="content">
         <div class="box"><h3>Lorem ipsum</h3> Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
         <div class="box"><h3>At vero eos et accusamus</h3>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
