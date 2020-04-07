@@ -191,16 +191,15 @@ layout: plain
                 - document.scrollingElement.clientHeight;
             let vPos = window.scrollY;
             let blur = 'none';
-            if (height - vPos < 500) {
-                let f = (500 - height + vPos) / height;
+            let blurStart = 300;
+            if (height - vPos < blurStart) {
+                let f = (blurStart - height + vPos) / height;
                 blur = `blur(${Math.round(f * 20)}px)`;
             }
-            let bgs = document.querySelectorAll('.background');
-            bgs.forEach(el => {
-                if (blur != el.style.filter) {
-                    el.style.filter = blur;
-                }
-            })
+            let el = document.querySelector('#background');
+            if (blur != el.style.filter) {
+                el.style.filter = blur;
+            }
         }
 
         // Listen for new scroll events, here we debounce our `storeScroll` function
