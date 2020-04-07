@@ -60,16 +60,9 @@ layout: plain
         }
 
         #logo {
-            top: 4ex;
-            text-align: center;
-            position: fixed;
+            padding-top: 5ex;
         }
 
-        #logo svg {
-            width: 60%;
-            height: auto;
-            color: #003366
-        }
 
         #bg-1 {
             background-image: url(/assets/brain_01-01.png)
@@ -125,10 +118,9 @@ layout: plain
         }
 
         #content {
-            padding-top: 260px;
+            padding-top: 100px;
         }
 
-        
 
     </style>
     <script>
@@ -185,23 +177,7 @@ layout: plain
                 if (blur != el.style.filter) {
                     el.style.filter = blur;
                 }
-            });
-            /* document.querySelectorAll('.box').forEach( el => {
-                let cr = el.getBoundingClientRect();
-                el.classList.remove('away');
-                if (cr.y+cr.height < window.innerHeight && cr.y > 80) {
-                    el.classList.add('unshift');
-                }
-                else if ( cr.y < 80 ) {
-                    el.classList.add('away');
-                }
-                else if ( cr.y+ 2 * cr.height > window.innerHeight ) {
-                    el.classList.remove('unshift');
-                }
-           
-                
-            });
-             */
+            })
         }
 
         // Listen for new scroll events, here we debounce our `storeScroll` function
@@ -224,34 +200,10 @@ layout: plain
     <div class="background" id="bg-1"></div>
     <div class="background" id="bg-2"></div>
     <div class="background" id="bg-3"></div>
-    <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col col-md-6" id="logo">
-                <svg fill="none" fill-rule="evenodd" stroke="black" stroke-width="0.501" stroke-linejoin="bevel"
-                    stroke-miterlimit="10" style="font-variant-ligatures:none"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1"
-                    overflow="visible" width="194.124pt" height="48.714pt" viewBox="0.734 -49.869 194.124 48.714">
-                    <g id="Layer 1" transform="scale(1 -1)">
-                        <g id="Group" fill-rule="nonzero" stroke-linejoin="miter" stroke="none" stroke-width="0.845">
-                            <path
-                                d="M 10.537,49.869 L 20.061,49.869 L 29.873,40.025 L 20.028,40.025 L 20.086,30.298 L 10.647,40.025 Z"
-                                fill="currentColor" marker-start="none" marker-end="none" />
-                            <path
-                                d="M 0.734,11.071 L 0.734,20.595 L 10.579,30.415 L 10.579,20.571 L 20.306,20.63 L 10.579,11.19 Z"
-                                fill="currentColor" marker-start="none" marker-end="none" />
-                            <path
-                                d="M 39.413,1.185 L 29.889,1.185 L 20.07,11.03 L 29.914,11.03 L 29.855,20.757 L 39.296,11.03 Z"
-                                fill="currentColor" marker-start="none" marker-end="none" />
-                            <path
-                                d="M 49.411,40.083 L 49.411,30.559 L 39.565,20.749 L 39.565,30.593 L 29.83,30.533 L 39.565,39.974 Z"
-                                fill="currentColor" marker-start="none" marker-end="none" />
-                            <text xml:space="preserve" transform="translate(55.545 1.616) scale(1 -1)" kerning="0"
-                                font-size="28" fill="currentColor">
-                                <tspan x="0" y="0" font-family="Roboto">TI Solution</tspan>
-                            </text>
-                        </g>
-                    </g>
-                </svg>
+    <div id="logo" class="container">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-7 col-lg-6 col-xl-5" id="logo">
+               <img style="width: 100%" src="logo.svg">
             </div>
         </div>
     </div>
