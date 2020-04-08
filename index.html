@@ -14,13 +14,13 @@ layout: plain
 -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Scrolltest</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     {%- seo -%}
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    <script src="{{ "/assets/javascript/bootstrap/jquery.min.js" | relative_url }}"></script>
-    <script src="{{ "/assets/javascript/bootstrap/bootstrap.bundle.min.js" | relative_url }}"></script>
+    <link rel="stylesheet" href="{{ "/assets/css/uikit.css" | relative_url }}">
+    <script src="{{ "/assets/js/uikit.min.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/uikit-icons.min.js" | relative_url }}"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -28,14 +28,15 @@ layout: plain
         body {
             overflow-x: hidden;
             position: relative;
-            margin-bottom: 170px; /* footer hight */
+            margin-bottom: 170px;
+            /* footer hight */
         }
 
         html {
             position: relative;
             min-height: 100%;
         }
-       
+
         .footer {
             position: absolute;
             height: 150px;
@@ -44,42 +45,61 @@ layout: plain
             /* Vertically center the text there */
             background-color: #edebeb;
         }
-        
+
 
         #logo {
             padding-top: 5ex;
         }
 
+        #logo img {
+            transform-origin: top center;
+            transform: scale(1) translateX(0%);
+            transition: transform 0.2s cubic-bezier(0.87, 0.1, 1, 1);
+            ;
+        }
+
+        #logo .uk-active img {
+            transform: scale(0.4) translateX(-75%);
+        }
+
         #background {
             top: 0;
             left: 0;
+            position: fixed;
+            z-index: -1;
             width: 100%;
             height: 100%;
-            z-index: -1;
-            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(208,222,234,1) 100%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(208, 222, 234, 1) 100%);
         }
 
         #bg-brain img {
             position: absolute;
-            top:300px;
+            top: 300px;
             right: -10%;
             width: 130%;
+            left: 0;
         }
-
+        #menuburger {
+            position: fixed;
+            top: 2ex;
+            left: 2ex;
+            z-index: 1000;
+        }
         #content {
             padding-top: 282px;
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 639px) {
             #logo {
                 padding-top: 6vw;
             }
-        
+
             #content {
-                padding-top: 120vw;
-            } 
+                padding-top: 74vw;
+            }
+
             #bg-brain img {
-                top:   40vw;
+                top: 40vw;
                 right: -5%;
                 width: 110%;
             }
@@ -90,16 +110,19 @@ layout: plain
             animation-duration: 5s;
             animation-iteration-count: infinite;
             animation-direction: normal;
-            
+
         }
+
         #bg-spot-1 {
             animation-name: spot-1;
         }
+
         #bg-spot-2 {
             animation-name: spot-2;
         }
 
         @keyframes spot-1 {
+
             50%,
             to {
                 opacity: 1;
@@ -137,14 +160,10 @@ layout: plain
             color: #003366;
             font-size: 1.55rem;
         }
-            
+
         .footercredits p {
-              font-size: 0.75rem
+            font-size: 0.75rem
         }
-
-        
-
-
     </style>
     <script>
 
@@ -197,7 +216,7 @@ layout: plain
                 blur = `blur(${Math.round(f * 20)}px)`;
             }
             let el = document.querySelector('#background');
-            if (blur != el.style.filter) {
+            if (el && blur != el.style.filter) {
                 el.style.filter = blur;
             }
         }
@@ -217,28 +236,29 @@ layout: plain
 </head>
 
 <body>
-    <div id="background" class="container-fluid fixed-top">
-        <div class="container" id="bg-brain">
-            <div class="row justify-content-center">
-                <div class="col">
-                    <img src="/assets/brain_spot_01-01.png">
-                    <img id="bg-spot-1" src="/assets/brain_spot_02-01.png">
-                    <img id="bg-spot-2" src="/assets/brain_spot_03-01.png">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="logo" class="container fixed-top">
-        <div class="row justify-content-center">
-            <div class="col-10 col-md-7 col-lg-6 col-xl-5" id="logo">
-               <img style="width: 100%" src="logo.svg">
+    <div id="background">
+        <div class="uk-container" id="bg-brain">
+            <div class="uk-position-relative">
+                <img src="/assets/brain_spot_01-01.png">
+                <img id="bg-spot-1" src="/assets/brain_spot_02-01.png">
+                <img id="bg-spot-2" src="/assets/brain_spot_03-01.png">
             </div>
         </div>
     </div>
 
-    <div id="content" class="container">
-        <div class="row mb-5">
-            <div class="col offset-md-6 col-md-6 box">
+
+    <div id="logo">
+        <div class="uk-container" uk-sticky>
+            <div class="uk-flex-center uk-margin-top" uk-grid>
+                <div class="uk-width-5-6 uk-width-2-3@m uk-width-1-2@l">
+                    <img style="width: 100%;" src="logo.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="uk-container">
+        <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
+            <div class="uk-width-1-2@s box">
                 <h3>Lorem ipsum</h3> Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore
                 et dolore magna aliqua.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -246,71 +266,111 @@ layout: plain
                 laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
                 beatae vitae
                 dicta sunt explicabo.
+                
+
             </div>
         </div>
 
-        <div class="row  mb-5">
-            <div class="col offset-md-6 col-md-6 box">
-                <h3>At vero eos et accusamus</h3>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+        <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
+            <div class="uk-width-1-2@s box">
+                <h3>At vero eos et accusamus</h3>Et harum quidem rerum facilis est et expedita distinctio. Nam
+                libero
                 tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat
                 facere
-                possimus, omnis voluptas assumenda est, omnis dolor repellendus. Ut enim ad minim veniam, quis nostrud
+                possimus, omnis voluptas assumenda est, omnis dolor repellendus. Ut enim ad minim veniam, quis
+                nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </div>
         </div>
-        <div class="row  mb-5">
-            <div class="col offset-md-6 col-md-6 box">
-                <h3>Quis autem vel eum</h3>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+
+        <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
+            <div class="uk-width-1-2@s box">
+                <h3>Quis autem vel eum</h3>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore
                 eu
                 fugiat nulla pariatur.
             </div>
         </div>
-        <div class="row  mb-5">
-            <div class="col offset-md-6 col-md-6 box">
+
+        <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
+            <div class="uk-width-1-2@s box">
                 <h3>Ut enim ad minima veniam</h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
                 officia
                 deserunt mollit anim id est laborum.
             </div>
         </div>
-        <div class="row  mb-5">
-            <div class="col offset-md-6 col-md-6 box">
+        <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
+            <div class="uk-width-1-2@s box">
                 <h3>Nam libero tempore</h3>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
-                cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
+                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                occaecati
+                cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
+                laborum et
                 dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
             </div>
         </div>
-        <div class="row  mb-5">
-            <div class="col offset-md-6 col-md-6 box">
-               <h3>At vero eos et accusamus</h3>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+        <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
+            <div class="uk-width-1-2@s box">
+                <h3>At vero eos et accusamus</h3>Et harum quidem rerum facilis est et expedita distinctio. Nam
+                libero
                 tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat
                 facere
-                possimus, omnis voluptas assumenda est, omnis dolor repellendus. Ut enim ad minim veniam, quis nostrud
+                possimus, omnis voluptas assumenda est, omnis dolor repellendus. Ut enim ad minim veniam, quis
+                nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </div>
         </div>
-        <div class="row  mb-5">
-            <div class="col offset-md-6 col-md-6 box">
-                    <h3>Nam libero tempore</h3>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
-                cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
+        <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
+            <div class="uk-width-1-2@s box">
+                <h3>Nam libero tempore</h3>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                occaecati
+                cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
+                laborum et
                 dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
             </div>
         </div>
     </div>
-    <footer class="footer text-muted">
-        <div class="container">
-            <div class="row md-5">
-                <div class="col">
-                    <footercredits>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</footercredits>
+
+    <footer class="uk-margin-top footer uk-text-muted">
+        <div class="uk-container">
+            <div class="uk-child-width-expand@s" uk-grid>
+                <div>
+                    <footercredits>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</footercredits>
                 </div>
-                <div class="col">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat
                 </div>
-                <div class="col">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat
                 </div>
             </div>
         </div>
     </footer>
+
+    <button id="menuburger" class="hamburger hamburger--squeeze" type="button"  uk-toggle="target: #offcanvas-reveal">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div id="offcanvas-reveal" uk-offcanvas="mode: slide; overlay: false">
+        <div class="uk-offcanvas-bar">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <h3>Title</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.</p>
+
+
+        </div>
+    </div>
 </body>
