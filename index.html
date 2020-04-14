@@ -25,28 +25,6 @@ layout: plain
         href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <style>
-        body {
-            overflow-x: hidden;
-            position: relative;
-            margin-bottom: 170px;
-            /* footer hight */
-        }
-
-        html {
-            position: relative;
-            min-height: 100%;
-        }
-
-        .footer {
-            position: absolute;
-            height: 150px;
-            padding-top: 20px;
-            width: 100%;
-            /* Vertically center the text there */
-            background-color: #edebeb;
-        }
-
-
         #logo {
             padding-top: 5ex;
         }
@@ -79,12 +57,18 @@ layout: plain
             width: 130%;
             left: 0;
         }
+
         #menuburger {
             position: fixed;
             top: 2ex;
             left: 2ex;
             z-index: 1000;
         }
+        footer {
+            background-color: #edebeb;
+            display: flow-root;
+        }
+
         #content {
             padding-top: 282px;
         }
@@ -236,6 +220,7 @@ layout: plain
 </head>
 
 <body>
+
     <div id="background">
         <div class="uk-container" id="bg-brain">
             <div class="uk-position-relative">
@@ -256,6 +241,25 @@ layout: plain
             </div>
         </div>
     </div>
+    <button id="menuburger" class="hamburger hamburger--squeeze" type="button" uk-toggle="target: #offcanvas-reveal">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div id="offcanvas-reveal" uk-offcanvas="mode: slide; overlay: false">
+        <div class="uk-offcanvas-bar">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <h3>Title</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.</p>
+
+
+        </div>
+    </div>
     <div id="content" class="uk-container">
         <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
             <div class="uk-width-1-2@s box">
@@ -266,7 +270,7 @@ layout: plain
                 laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
                 beatae vitae
                 dicta sunt explicabo.
-                
+
 
             </div>
         </div>
@@ -332,45 +336,28 @@ layout: plain
         </div>
     </div>
 
-    <footer class="uk-margin-top footer uk-text-muted">
-        <div class="uk-container">
-            <div class="uk-child-width-expand@s" uk-grid>
-                <div>
-                    <footercredits>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</footercredits>
-                </div>
-                <div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat
-                </div>
-                <div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat
+    <footer class="uk-margin-top uk-position-relative uk-text-muted">
+            <div class="uk-container uk-margin-large-bottom uk-margin-large-top">
+                <div class="uk-child-width-expand@s" uk-grid>
+                    <div>
+                        <footercredits>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</footercredits>
+                    </div>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat
+                    </div>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-
-    <button id="menuburger" class="hamburger hamburger--squeeze" type="button"  uk-toggle="target: #offcanvas-reveal">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-    <div id="offcanvas-reveal" uk-offcanvas="mode: slide; overlay: false">
-        <div class="uk-offcanvas-bar">
-
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-            <h3>Title</h3>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.</p>
+        </footer>
 
 
-        </div>
-    </div>
+
 </body>
