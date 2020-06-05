@@ -34,14 +34,14 @@ layout: plain
         <h3>Topics</h3>
         <ul class="uk-list">
         {% for panel in site.data.panels %}
-            <li><a class="uk-link-text" href="#panel{{ forloop.index }}">{{ panel.title }}</a></li>
+            <li><a class="uk-link-text" href="#panel{{ forloop.index }}" uk-scroll="offset: 300">{{ panel.title }}</a></li>
         {% endfor %}
         </ul>
         
         <h3>People</h3>
         <ul class="uk-list">
         {% for person in site.data.people %}
-             <li><a class="uk-link-text" href="#person{{ forloop.index }}">{{ person.name }}</a></li>
+             <li><a class="uk-link-text" href="#person{{ forloop.index }}" uk-scroll>{{ person.name }}</a></li>
         {% endfor %}
         </ul>
     </div>
