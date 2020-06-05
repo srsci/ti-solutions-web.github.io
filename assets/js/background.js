@@ -27,7 +27,7 @@ const storeScroll = () => {
         - document.scrollingElement.clientHeight;
     let vPos = window.scrollY;
     let blur = 'none';
-    let blurStart = 300;
+    let blurStart = 600;
     if (height - vPos < blurStart) {
         let f = (blurStart - height + vPos) / height;
         blur = `blur(${Math.round(f * 20)}px)`;
