@@ -41,7 +41,7 @@ layout: plain
         <h3>People</h3>
         <ul class="uk-list">
         {% for person in site.data.people %}
-             <li><a class="uk-link-text" href="#pers{{ forloop.index }}">{{ person.name }}</a></li>
+             <li><a class="uk-link-text" href="#person{{ forloop.index }}">{{ person.name }}</a></li>
         {% endfor %}
         </ul>
     </div>
