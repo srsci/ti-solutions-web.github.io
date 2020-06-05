@@ -1,0 +1,12 @@
+- text: Facebook
+  href: https://facebook.com
+  icon: facebook
+
+- text: Google
+  href: https://google.com
+  icon: google
+  
+- text: Twitter
+  href: https://twitter.com
+  icon: twitter  
+  
