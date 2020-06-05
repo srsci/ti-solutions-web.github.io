@@ -33,7 +33,7 @@ layout: plain
 
         <h3>Topics</h3>
         <ul class="uk-list">
-        {% for panel in site.data.panels %}
+        {% for panel in site.data.topics %}
             <li><a class="uk-link-text" href="#panel{{ forloop.index }}" uk-scroll="offset: 300" uk-toggle="target: #offcanvas-reveal">{{ panel.title }}</a></li>
         {% endfor %}
         </ul>
@@ -47,7 +47,7 @@ layout: plain
     </div>
 </div>
 <div id="content" class="uk-container">
-    {% for panel in site.data.panels %}
+    {% for panel in site.data.topics %}
     <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
         <div class="uk-width-1-2@s box">
             <h3 id="panel{{ forloop.index }}">{{ panel.title }}</h3>
