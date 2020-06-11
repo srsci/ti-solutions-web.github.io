@@ -73,6 +73,7 @@ layout: plain
         <div class="uk-child-width-expand@s" uk-grid>
             {% for link in site.data.links %}
             <div>
+               {% if link.title %}<h4 class="link-title">{{ link.title }}</h4>{% endif %}
                {% if link.href %}<a href="{{ link.href }}" class="uk-link-text">{% endif %}
                     {% if link.icon %}<span uk-icon="icon: {{ link.icon }}"></span> {% endif %}{{ link.text }}
                {% if link.href %}</a>{% endif %}
