@@ -1,36 +1,23 @@
-- title: Italian Mountains
+- title: The Company
   body: |
-    A small river named Duden flows by their place and supplies it with the 
-    necessary regelialia. It is a paradisematic country, in which roasted parts 
-    of sentences fly into your mouth.
-- title: Italian Mountains
+    TI Solutions AG develops high-quality and flexible stimulation devices and treatment planning tools for temporal interference (TI) research. The company was founded in December 2019 in Zurich, Switzerland, by the creators of the TI concept in collaboration with Z43 to specifically foster TI research.
+- title: The Science
   body: |
-    A small river named Duden flows by their place and supplies it with the 
-    necessary regelialia. It is a paradisematic country, in which roasted parts 
-    of sentences fly into your mouth.
-- title: Italian Mountains
+    Temporal Interference (TI) stimulation is a non-invasive technique which uses scalp electrodes to apply electrical interfering high-frequency currents to reach structures deep inside the brain. While the applied frequencies of the electric fields themselves are too high to induce neural firing, the frequency of the envelop can drive neural activity. This new concept holds great promise for both research and the clinics as it may open new experimental opportunities and may be used for selective deep brain stimulation to treat certain disorders without the necessity of surgically implanting electrodes within certain brain areas as is still common practice today. 
+- title: TI Devices
   body: |
-    A small river named Duden flows by their place and supplies it with the 
-    necessary regelialia. It is a paradisematic country, in which roasted parts 
-    of sentences fly into your mouth.
-- title: Italian Mountains
+    The neurostimulation devices under development will support both alternating current and TI stimulation, multiple stimulation channels, a wide carrier-frequency range, flexible modulation, magnetic resonance imaging and electroencephalogram recording compatibility, and more. The preliminary specifications are listed here. 
+- title: Treatment Planning Tools
   body: |
-    A small river named Duden flows by their place and supplies it with the 
-    necessary regelialia. It is a paradisematic country, in which roasted parts 
-    of sentences fly into your mouth.
-- title: Italian Mountains
+    The treatment planning tool will provide high quality visualization and optimization of alternating current and TI stimulation configurations, based on electromagnetic simulations involving high resolution, detailed representations of head anatomy. Thanks to state-of-the-art simulation technologies, carefully curated tissue property data, high-performance computing support, and an online-accessible, cloud-based modelling platform, simulations of complex and realistic setups can be performed without need for specialized software or hardware. Particular foci are placed on flexibility with regard to optimization criteria (for scientific exploration), good user guidance, and powerful visualization. While initially, a range of precomputed human and animal head models will be provided, it is foreseen to add personalized treatment modelling in the near future, to allow modeling of any anatomy, electrode shape and placement.
+- title: Services
   body: |
-    A small river named Duden flows by their place and supplies it with the 
-    necessary regelialia. It is a paradisematic country, in which roasted parts 
-    of sentences fly into your mouth.
-- title: Italian Mountains
-  body: |
-    A small river named Duden flows by their place and supplies it with the 
-    necessary regelialia. It is a paradisematic country, in which roasted parts 
-    of sentences fly into your mouth.
-- title: Italian Mountains
-  body: |
-    A small river named Duden flows by their place and supplies it with the 
-    necessary regelialia. It is a paradisematic country, in which roasted parts 
-    of sentences fly into your mouth.
+    Our Team will provide all engineering services required for the optimal application of the developed TI devices and treatment planning tools, such as trouble shooting support, replacement of defective devices, and repairs. We are happy to contribute in drafting research proposals and perform simulation for the treatment planning if required. We are also interested to discuss and, if feasible, implement additional features into our devices and software tools.
 
+- title: References
+  body: |
+    Grossman N, Okun MS, Boyden ES. Translating Temporal Interference Brain Stimulation to Treat Neurological and Psychiatric Conditions [published correction appears in JAMA Neurol. 2018 Nov 1;75(11):1443]. JAMA Neurol. 2018;75(11):1307‐1308. doi:10.1001/jamaneurol.2018.2760
+
+Grossman N. Modulation without surgical intervention. Science. 2018;361(6401):461‐462. doi:10.1126/science.aau4915
+
+Grossman N, Bono D, Dedic N, et al. Noninvasive Deep Brain Stimulation via Temporally Interfering Electric Fields. Cell. 2017;169(6):1029‐1041.e16. doi:10.1016/j.cell.2017.05.024
