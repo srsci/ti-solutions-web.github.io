@@ -51,7 +51,7 @@ layout: plain
     <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
         <div class="uk-width-1-2@s box">
             <h3 id="topic{{ forloop.index }}">{{ topic.title }}</h3>
-            <div>{{ topic.body }}</div>
+            <div>{{ topic.body | markdownify }}</div>
         </div>
     </div>
     {% endfor %}
@@ -64,7 +64,7 @@ layout: plain
             {% for person in site.data.people %}
             <div>
                 <h4 class="person-name" id="person{{ forloop.index }}">{{ person.name }}</h4>
-                <div>{{ person.bio }}</div>
+                <div>{{ person.bio |markdownify }}</div>
             </div>
             {% endfor %}
         </div>
@@ -73,8 +73,9 @@ layout: plain
         <div class="uk-child-width-expand@s" uk-grid>
             {% for link in site.data.links %}
             <div>
-                <a href="{{ link.href }}" class="uk-link-text">
-                    {% if link.icon %}<span uk-icon="icon: {{ link.icon }}"></span> {% endif %}{{ link.text }}</a>
+               {% if link.href %}<a href="{{ link.href }}" class="uk-link-text">{% endif %}
+                    {% if link.icon %}<span uk-icon="icon: {{ link.icon }}"></span> {% endif %}{{ link.text | markdownify }}
+               {% if link.href %}</a>{% endif %}
             </div>
             {% endfor %}
         </div>
