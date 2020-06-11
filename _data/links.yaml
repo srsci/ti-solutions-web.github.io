@@ -1,10 +1,11 @@
-- text: Facebook
-  href: https://facebook.com
-  icon: facebook
+- text: Contact / Location
+TI Solutions AG
+Zeughausstrasse 43
+8004 Zurich
+Switzerland
 
-- text: Google
-  href: https://google.com
-  icon: google
+- text: +41 44 245 9700
+info@tisag.swiss
   
 - text: Twitter
   href: https://twitter.com
