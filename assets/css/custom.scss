@@ -130,6 +130,19 @@ h4.person-name {
     text-decoration: none;
     color: #77869c;
 } 
+.ti-topic a:visited {
+    text-decoration: none;
+    color: #09449b;
+} 
+.ti-topic a:active {
+    text-decoration: none;
+    color: 032d6a;
+} 
+.ti-topic a:hover {
+    text-decoration: none; 
+    background-color:yellow;
+    color:blue
+}
 
 html {
     font-family: 'Roboto';
