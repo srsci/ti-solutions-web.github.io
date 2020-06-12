@@ -126,9 +126,14 @@ h4.person-name {
     margin-bottom: 5px;
 }
 
-.ti-topic a {
-    color: #77869c;
-}
+.ti-topic a:link {
+    text-decoration: none;
+    color: #77869c;
+} 
+.ti-topic a:visited {text-decoration: none} 
+.ti-topic a:active {text-decoration: none} 
+.ti-topic a:hover {text-decoration: none; background-color:yellow;color:blue}
+
 
 .ti-person a {
     color: #77869c;
