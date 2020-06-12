@@ -144,6 +144,24 @@ h4.person-name {
     color:blue
 }
 
+.ti-person a:link {
+    text-decoration: none;
+    color: #77869c;
+} 
+.ti-person a:visited {
+    text-decoration: none;
+    color: #09449b;
+} 
+.ti-person a:active {
+    text-decoration: none;
+    color: 032d6a;
+} 
+.ti-person a:hover {
+    text-decoration: none; 
+    background-color:white;
+    color:blue
+}
+
 html {
     font-family: 'Roboto';
 }
