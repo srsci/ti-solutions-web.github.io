@@ -73,6 +73,9 @@ layout: plain
 <footer class="ti-footer uk-margin-top uk-position-relative uk-text-muted uk-text-small">
     <div class="uk-container uk-margin-large-bottom uk-margin-large-top">
         <div class="uk-child-width-expand@s" uk-grid>
+            <div class="ti-logo">
+                <img style="width: 100%;" src="logo.svg">
+            </div>
             {% for link in site.data.links %}
             <div class="ti-link">
                {% if link.title %}<h4>{{ link.title }}</h4>{% endif %}
