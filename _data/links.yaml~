@@ -1,0 +1,10 @@
+- text: |
+    <img src="logo.svg" style="width: 40%; margin-left: -36px;"><br/>
+    TI Solutions AG<br/>
+    Zeughausstrasse 43<br/>
+    8004 Zurich, Switzerland<br/>
+    <span uk-icon="icon: receiver"></span> +41 44 245 9700<br/>
+    <span uk-icon="icon: mail"></span> info@tisag.swiss
+- text: ""  
+- text: © 2020 TI Solutions AG
+  

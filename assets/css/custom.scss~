@@ -29,28 +29,19 @@
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(208, 222, 234, 1) 100%);
 }
 
-#bg-box {
+#bg-brain img {
     position: absolute;
     top: 230px;
     right: -10%;
     width: 90%;
     left: 0;
-    img {
-        width: 100%;
-    }
 }
 
 #menuburger {
     position: fixed;
-    top: 1ex;
+    top: 2ex;
     right: 2ex;
     z-index: 1000;
-}
-#menu-label {
-    font-size: 2rem;
-    font-weight: 300;
-    padding-right: 0.5ex;
-    color:#1c3664;;
 }
 footer {
     background-color: white;
@@ -59,7 +50,7 @@ footer {
 }
 
 #content {
-    padding-top: 260px;
+    padding-top: 282px;
 }
 
 @media (max-width: 639px) {
@@ -71,45 +62,52 @@ footer {
         padding-top: 74vw;
     }
 
-    #bg-box {
+    #bg-brain img {
         top: 40vw;
         right: -5%;
         width: 110%;
     }
 }
 
-#bg-spot-1 {
-    position: absolute;
-    background-image: radial-gradient(circle at center,
-    rgba(218,111,169,1) 0,
-    rgba(218,111,169,0.8) 30%, 
-    rgba(0,0,0,0) 70%);
-    width: 8%;
-    height: 12%;
+#bg-spot-1,
+#bg-spot-2 {
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: normal;
+
+}
+
+#bg-spot-1 {
     animation-name: spot-1;
-    animation-timing-function: ease-in-out;
+}
+
+#bg-spot-2 {
+    animation-name: spot-2;
 }
 
 @keyframes spot-1 {
 
     from {
-        top: 15%;
-        right: 35%;
         opacity: 0;
     }
-    10% {
+    
+    50%,60% {
         opacity: 1;
     }
-    90% {
-        opacity: 1;
-    }
+    80%,
     to {
-        top: 40%;
-        right: 74%;
         opacity: 0;
+    }
+}
+
+@keyframes spot-2 {
+    from,
+    50% {
+        opacity: 0;
+    }
+    80%,
+    to {
+        opacity: 1;
     }
 }
 
@@ -162,7 +160,7 @@ h4.person-name {
 }
 
 .ti-people {
-    background-color: rgba(248, 252, 254, 0.8);
+    background-color: rgba(248, 252, 254, 0.7);
     width: 100%;
     float: left;
 }
@@ -177,12 +175,12 @@ h4.person-name {
 } 
 .ti-person a:active {
     text-decoration: none;
-    color: #032d6a;
+    color: 032d6a;
 } 
 .ti-person a:hover {
     text-decoration: none; 
     background-color:white;
-    color:#032d6a
+    color:032d6a
 }
 
 html {

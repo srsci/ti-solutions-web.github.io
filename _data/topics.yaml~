@@ -1,0 +1,68 @@
+- title: The Company
+  body: |
+    TI Solutions AG develops high-quality and flexible stimulation devices and treatment planning tools 
+    for temporal interference (TI) research. The company was founded in December 2019 in Zurich, Switzerland, 
+    by the creators of the TI concept in collaboration with <a href="https://www.z43.swiss/" target="_blank" >Z43</a> 
+    to specifically foster TI research.
+
+- title: The Science
+  body: |
+    Temporal Interference (TI) stimulation is a non-invasive technique which uses scalp electrodes to apply electrical 
+    interfering high-frequency currents to reach structures deep inside the brain. While the applied frequencies of the 
+    electric fields themselves are too high to induce neural firing, the frequency of the envelop can drive neural activity. 
+    This new concept holds great promise for both research and the clinics as it may open new experimental opportunities and 
+    may be used for selective deep brain stimulation to treat certain disorders without the necessity of surgically implanting 
+    electrodes within certain brain areas as is still common practice today.
+    
+    Grossman N, Bono D, Dedic N, et al. Noninvasive Deep Brain Stimulation via Temporally Interfering Electric Fields. 
+    Cell. 2017;169(6):1029‐1041.e16. doi:10.1016/j.cell.2017.05.024
+
+- title: References
+  body: |
+    Alekseichuk I, Mantell K, Shirinpour S, Opitz A. Comparative modeling of transcranial magnetic and electric stimulation in mouse, monkey, and human. Neuroimage. 2019;194:136‐148. doi:10.1016/j.neuroimage.2019.03.044
+
+    Huang Y, Parra LC. Can transcranial electric stimulation with multiple electrodes reach deep targets?. Brain Stimul. 2019;12(1):30‐40. doi:10.1016/j.brs.2018.09.010
+
+    Karimi F, Attarpour A, Amirfattahi R, Nezhad AZ. Computational analysis of non-invasive deep brain stimulation based on interfering electric fields. Phys Med Biol. 2019;64(23):235010. doi:10.1088/1361-6560/ab5229
+
+    Rampersad S, Roig-Solvas B, Yarossi M, et al. Prospects for transcranial temporal interference stimulation in humans: A computational study. Neuroimage. 2019;202:116124. doi:10.1016/j.neuroimage.
+
+    Grossman N. Modulation without surgical intervention. Science. 2018;361(6401):461‐462. doi:10.1126/science.aau4915
+
+    Grossman N, Okun MS, Boyden ES. Translating Temporal Interference Brain Stimulation to Treat Neurological and Psychiatric Conditions [published correction appears in JAMA Neurol. 2018 Nov 1;75(11):1443]. JAMA Neurol. 2018;75(11):1307‐1308. doi:10.1001/jamaneurol.2018.2760
+
+    Halpern CH, Miller KJ, Wu H, Tass PA. Letter: Electric Beats Open New Frontiers for Deep Brain Stimulation. Neurosurgery. 2018;82(1):E19‐E20. doi:10.1093/neuros/nyx482
+
+    Negahbani E, Kasten FH, Herrmann CS, Fröhlich F. Targeting alpha-band oscillations in a cortical model with amplitude-modulated high-frequency transcranial electric stimulation. Neuroimage. 2018;173:3‐12. doi:10.1016/j.neuroimage.2018.02.005
+
+    Vöröslakos M, Takeuchi Y, Brinyiczki K, et al. Direct effects of transcranial electric stimulation on brain circuits in rats and humans. Nat Commun. 2018;9(1):483. Published 2018 Feb 2. doi:10.1038/s41467-018-02928-3
+
+    Dmochowski J, Bikson M. Noninvasive Neuromodulation Goes Deep. Cell. 2017;169(6):977‐978. doi:10.1016/j.cell.2017.05.017
+
+    Grossman N, Bono D, Dedic N, et al. Noninvasive Deep Brain Stimulation via Temporally Interfering Electric Fields. Cell. 2017;169(6):1029‐1041.e16. doi:10.1016/j.cell.2017.05.024
+
+
+- title: TI Devices
+  body: |
+    The neurostimulation devices under development will support both alternating current and TI stimulation, 
+    multiple stimulation channels, a wide carrier-frequency range, flexible modulation, magnetic resonance 
+    imaging and electroencephalogram recording compatibility, and more. The preliminary specifications are listed here. 
+
+- title: Treatment Planning Tools
+  body: |
+    The treatment planning tool will provide high-quality visualization and optimization of alternating current 
+    and TI stimulation configurations based on electromagnetic simulations involving detailed, high resolution 
+    representations of head anatomies of both, humans and animals. Thanks to a state-of-the-art cloud-based 
+    modelling platform, simulations of complex and realistic setups can be performed without specialized 
+    soft- or hardware. A particular focus is placed on flexibility with regard to optimization criteria 
+    (for scientific exploration), good user guidance, and powerful visualization. In 2021, personalized 
+    treatment modelling will be added that allows the modeling of any anatomy as well as any electrode shape and placement.
+
+    
+- title: Services
+  body: |
+    Our Team will provide all engineering services required for the optimal application of the developed TI devices 
+    and treatment planning tools, such as trouble shooting support, replacement of defective devices, and repairs. 
+    We are happy to contribute in drafting research proposals and perform simulation for the treatment planning 
+    if required. We are also interested to discuss and, if feasible, implement additional features into our devices 
+    and software tools.
