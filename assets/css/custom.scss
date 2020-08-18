@@ -29,12 +29,15 @@
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(208, 222, 234, 1) 100%);
 }
 
-#bg-brain img {
+#bg-box {
     position: absolute;
     top: 230px;
     right: -10%;
     width: 90%;
     left: 0;
+    img {
+        width: 100%;
+    }
 }
 
 #menuburger {
@@ -62,52 +65,45 @@ footer {
         padding-top: 74vw;
     }
 
-    #bg-brain img {
+    #bg-box {
         top: 40vw;
         right: -5%;
         width: 110%;
     }
 }
 
-#bg-spot-1,
-#bg-spot-2 {
+#bg-spot-1 {
+    position: absolute;
+    background-image: radial-gradient(circle at center,
+    rgba(218,111,169,1) 0,
+    rgba(218,111,169,0.8) 30%, 
+    rgba(0,0,0,0) 70%);
+    width: 8%;
+    height: 12%;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: normal;
-
-}
-
-#bg-spot-1 {
     animation-name: spot-1;
-}
-
-#bg-spot-2 {
-    animation-name: spot-2;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes spot-1 {
 
     from {
+        top: 15%;
+        right: 35%;
         opacity: 0;
     }
-    
-    50%,60% {
+    10% {
         opacity: 1;
     }
-    80%,
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes spot-2 {
-    from,
-    50% {
-        opacity: 0;
-    }
-    80%,
-    to {
+    90% {
         opacity: 1;
+    }
+    to {
+        top: 40%;
+        right: 74%;
+        opacity: 0;
     }
 }
 
