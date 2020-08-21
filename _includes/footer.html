@@ -1,0 +1,14 @@
+<footer class="ti-footer uk-position-relative uk-text-muted uk-text-small">
+    <div class="uk-container uk-margin-large-bottom uk-margin-large-top">
+        <div class="uk-child-width-expand@s" uk-grid>
+            {% for link in site.data.links %}
+            <div class="ti-link">
+                {% if link.title %}<h4>{{ link.title }}</h4>{% endif %}
+                {% if link.href %}<a href="{{ link.href }}" class="uk-link-text">{% endif %}
+                    {% if link.icon %}<span uk-icon="icon: {{ link.icon }}"></span> {% endif %}{{ link.text }}
+                    {% if link.href %}</a>{% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</footer>

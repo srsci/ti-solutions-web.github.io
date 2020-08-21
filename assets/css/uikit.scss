@@ -6,11 +6,14 @@ $global-color: #000;
 $primary-color: #1c3664;
 $offcanvas-bar-background: #fff;
 $offcanvas-bar-color-mode: none;
+$navbar-background: rgba(255,255,255,0.9);
+$navbar-nav-item-font-size: 1.6rem;
+$navbar-nav-item-text-transform: none;
 
-$hamburger-layer-color         : #1c3664;
-$hamburger-padding-x: 20px;
-$hamburger-padding-y: 15px;
-$hamburger-types     : (squeeze);
+// $hamburger-layer-color         : #1c3664;
+// $hamburger-padding-x: 20px;
+// $hamburger-padding-y: 15px;
+// $hamburger-types     : (squeeze);
 
 // 2. Import default variables and available mixins.
 @import "variables-theme.scss";
@@ -27,5 +30,5 @@ $overlay-default-background: rgba($global-background, 0.7);
 // 4. Import UIkit.
 @import "uikit-theme.scss";
 
-@import "hamburgers/hamburgers.scss";
+// @import "hamburgers/hamburgers.scss";
 

@@ -1,0 +1,37 @@
+<nav class="uk-navbar-container" uk-navbar uk-sticky>
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            <li><a href="#"><img src="logo.svg"></a></li>
+            </ul>
+    </div>
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+            <li class="uk-visible@m"><a href="#">Positions</a></li>
+            <li class="uk-visible@m"><a href="#">Specifications</a></li>
+            <li><a href="#" uk-toggle="target: #offcanvas-reveal" uk-icon="icon: menu; ratio: 2"></a> </li>
+        </ul>
+    </div>
+</nav>
+<div id="offcanvas-reveal" uk-offcanvas="mode: slide; overlay: false; flip: 
+true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Topics</h3>
+        <ul class="uk-list">
+            {% for topic in site.data.topics %}
+            <li><a class="uk-link-text" href="#topic{{ forloop.index }}" uk-scroll="offset: 300"
+                    uk-toggle="target: #offcanvas-reveal">{{ topic.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <h3>People</h3>
+        <ul class="uk-list">
+            {% for person in site.data.people %}
+            <li><a class="uk-link-text" href="#person{{ forloop.index }}" uk-scroll
+                    uk-toggle="target: #offcanvas-reveal">{{ person.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
