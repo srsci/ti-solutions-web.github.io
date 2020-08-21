@@ -82,34 +82,46 @@ footer {
     position: absolute;
     background-image: radial-gradient(circle at center,
     rgba(218,111,169,1) 0,
-    rgba(218,111,169,0.8) 30%, 
-    rgba(0,0,0,0) 70%);
+    rgba(218,111,169,0.8) 10%, 
+    rgba(0,0,0,0) 40%);
     width: 8%;
     height: 12%;
+    top: 15%;
+    right: 25%;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-name: spot-1;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
+    will-change: transform, opacity;
 }
 
 @keyframes spot-1 {
 
     from {
-        top: 15%;
-        right: 35%;
         opacity: 0;
+        transform: translate(0%,0%);
     }
     10% {
+        transform: translate(0%,0%);
         opacity: 1;
+    }
+    30% {
+        transform: translate(-200%,0%);
+    }
+    45% {
+        transform: translate(-350%,-10%);
+    }
+    65% {
+        transform: translate(-500%,40%);
     }
     90% {
         opacity: 1;
+        transform: translate(-600%,200%);
     }
     to {
-        top: 40%;
-        right: 74%;
         opacity: 0;
+        transform: translate(-600%,200%);
     }
 }
 
