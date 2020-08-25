@@ -1,6 +1,8 @@
 ---
 ---
 
+$ti-color-dark-blue: #1b3764
+
 .uk-navbar-nav>li>a {
     transition-property: all;
     transition-duration: 0.2s;
@@ -44,10 +46,10 @@ nav.uk-active li a {
     font-size: 2rem;
     font-weight: 300;
     padding-right: 0.5ex;
-    color:#1c3664;;
+    color: $ti-color-dark-blue;
 }
 footer {
-    background-color: white;
+    background-color: $ti-color-dark-blue;
     width: 100%;
     float: left;
 }
@@ -122,7 +124,7 @@ h3 {
     
 h4.person-name {
     color: #77869c;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     margin-bottom: 5px;
 }
 

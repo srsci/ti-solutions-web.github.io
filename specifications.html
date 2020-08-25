@@ -8,11 +8,12 @@ layout: plain
             <table class="uk-table uk-table-striped uk-table-small">
             {% for spec in site.data.specifications %}
                 {% for item in spec %}
-                    <tr><td>{{ item[0] }}</td>
-                        <td class="uk-table-expand">{{ item[1] }}</td></tr>
+                    <tr><td>{{ item[0] | markdownify }}</td>
+                        <td class="uk-table-expand">{{ item[1] | markdownify }}</td></tr>
                 {% endfor %}
             {% endfor %}
             </table>
         </div>
     </div>
 </div>
+
