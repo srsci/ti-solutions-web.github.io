@@ -9,7 +9,7 @@
 - Waveforms: sinusoid, phase modulation, frequency modulation, AWG
 - AWG Memory depth: ">2M samples (2 seconds)"
 - Dynamic range: ">60dB (10µA to 10mA) Humans"
-- Precision/resolution: 16 bit, 1µs, synchronous update
+- Precision / resolution: 16 bit, 1µs, synchronous update
 - Harmonic and intermodulation Distortion: <0.05%
 - Ground reference: yes
 - Ground current monitoring: yes
