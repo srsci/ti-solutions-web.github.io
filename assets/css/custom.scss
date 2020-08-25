@@ -72,10 +72,16 @@ footer {
 
 #bg-spot-1 {
     position: absolute;
-    background-image: radial-gradient(circle at center,
+    background-image: radial-gradient(circle at center, #0084b4, 
+    rgba(2, 161, 218, 0.5) 10%, 
+    rgba(255, 255, 255, 0) 52.1%)
+    
+    <!-- background-image: radial-gradient(circle at center,
     rgba(0,132,180,1) 0,
     rgba(0,132,180,0.5) 10%, 
     rgba(0,0,0,0) 60%);
+    -->
+
     width: 7%;
     height: 7%;
     top: 15%;
