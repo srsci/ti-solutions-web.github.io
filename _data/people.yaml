@@ -1,25 +1,31 @@
 - name: Ed Boyden, PhD
+  pic: ed_500x500.png
   bio: |
     Prof. Ed Boyden is Y. Eva Tan Professor in Neurotechnology at MIT in Boston, USA, professor of Biological Engineering and Brain and Cognitive Sciences at MIT's Media Lab and McGovern Institute for Brain Research and an Investigator of the Howard Hughes Medical Institute. He leads the Synthetic Neurobiology Group, which develops new biotechnological tools for probing, analyzing, and engineering brain circuits. Together with Nir Grossman, he established the <a class="ti-person" href="https://patentimages.storage.googleapis.com/32/e9/f2/76389af38cd6ac/US20170020447A1.pdf" target="_blank">TI stimulation concept</a> in 2017. 
 
 - name: Nir Grossmann, Phd
+  pic: nir_500x500.png
   bio: |
     Prof. Nil Grossman is Lecturer at Imperial College London, a founding fellow of the UK Dementia Research Institute, and affiliated with Imperial’s Centre for Bioinspired Technology and Centre for Neurotechnology, MIT’s Media Lab and McGovern Institute for Brain Research. His research focuses on the development of new tools and principles for neuromodulatory interventions for neurodegenerative diseases and other brain disorders. Together with Ed Boyden, he established the <a class="ti-person" href="https://patentimages.storage.googleapis.com/32/e9/f2/76389af38cd6ac/US20170020447A1.pdf" target="_blank">TI stimulation concept</a> in 2017.
 
 - name: Henrich Kisker
+  pic: henner_500x500.png
   bio: |
     Henrich Kisker holds various positions as internal and external adviser in corporate, legal, and financial matters for a number of international companies. Since 2005, he is also member of the advisory board "Bankrat" of one of the largest Swiss banks, the Zürcher Kantonalbank, with total assets of CHF 167 billion. Until his retirement in 2018, he was the head of the tax and treasury functions of Senior PLC, an international manufacturing group quoted on the London Stock Exchange.
 
 - name: Niels Kuster, Phd
+  pic: niels_500x500.png
   bio: |
     Prof. Niels Kuster is the founder and Director of the Foundation for Research on Information Technologies in Society (IT'IS Foundation) in Zurich, Switzerland, and Associate Professor of the Department of Information Technology and Electrical Engineering at ETH Zurich. His research covers many aspects of electromagnetics and computational life sciences including TI. He is a long-time member of several standardization bodies and serves as a consultant on exposure safety assessment for governmental agencies around the globe.
 
 - name: Esra Neufeld, Phd
+  pic: esra_500x500.png
   bio: |
     Even the all-powerful Pointing has no control about the blind texts it is 
     Dr. Esra Neufeld is associate director of the IT’IS Foundation and Head of the Computational Life Science group at IT’IS. He leads several research teams on advanced multiphysics simulation in medicine, treatment planning software, medical image analysis and anatomical model generation, applied simulations particularly in the field bio-electromagnetics and electromagnetic-tissue interactions (heating, neurostimulation, cell proliferation, etc.) as well as in silico clinical trials and standardization.
 
 - name: Alvaro Pascual-Leone, Phd
+  pic: alvaro_500x500.png
   bio: |
     Prof. Alvaro Pascual-Leone is Professor of Neurology and Director of the Berenson-Allen Center for Noninvasive Brain Stimulation at Beth Israel Deaconess Medical Center and Harvard Medical School, Boston, USA. His research focuses on the field of non-invasive brain stimulation where his contributions span from technology development, through basic neurobiologic insights from animal studies and modeling approaches, to human proof-of-principle and multicenter clinical trials.
 

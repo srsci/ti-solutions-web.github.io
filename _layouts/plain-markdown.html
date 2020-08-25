@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
+<body>
+{%- include background.html -%}
+{%- include menu.html -%}
+<div id="content" class="uk-container">
+    <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
+        <div class="ti-topic uk-width-1-2@s box">
+            {{ content }}
+        </div>
+    </div>
+</div>
+{%- include footer.html -%}
+
+</body>
+</html>

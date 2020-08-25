@@ -4,11 +4,11 @@
 .uk-navbar-nav>li>a {
     transition-property: all;
     transition-duration: 0.2s;
+    font-weight: 300;
     img {
         transition-property: all;
         transition-duration: 0.2s;
         height: 80px;
-        padding-left: 10%;
     }
 }
 
@@ -117,15 +117,10 @@ footer {
 }
 
 h3 {
-    font-family: 'Roboto Slab';
-    font-weight: 300;
-    color: #003366;
     font-size: 1.45rem;
 }
     
 h4.person-name {
-    font-family: 'Roboto Slab';
-    font-weight: 300;
     color: #77869c;
     font-size: 0.95rem;
     margin-bottom: 5px;
@@ -178,7 +173,3 @@ h4.person-name {
     color:#032d6a
 }
 
-html {
-    font-family: 'Roboto';
-}
-    
