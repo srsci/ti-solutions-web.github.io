@@ -18,15 +18,15 @@ true">
 
         <button class="uk-offcanvas-close" type="button" uk-close></button>
 
-        <a href="specifications.html"><h3>Specifications</h3></a>
-        <a href="positions.html"><h3>Positions</h3></a>
+        <h3><a href="specifications.html">Specifications</a></h3>
+        <h3><a href="positions.html">Positions</a></h3>
         <h3>Topics</h3>
         <ul class="uk-list">
             {% for topic in site.data.topics %}
             <li><a class="uk-link-text"
                 href="/#topic{{ forloop.index }}"
                 {% if page.name == 'index.html' %}uk-scroll="offset: 300"{% endif %}
-                uk-toggle="target: #offcanvas-reveal">{{ page.name }}{{ topic.title }}</a></li>
+                uk-toggle="target: #offcanvas-reveal">{{ topic.title }}</a></li>
             {% endfor %}
         </ul>
 
