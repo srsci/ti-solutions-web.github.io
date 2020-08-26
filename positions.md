@@ -44,4 +44,5 @@ Please send your application documents (in English) consisting of motivational l
 
 Zurich, Switzerland, Phone: +41 44 245 96 96, <jobs@z43.swiss>
 Informal enquiries are welcome and should be directed to Dr. Sabine Regel <regel@ti-solutions.swiss>.
+
 [Download as Pdf](https://ti-solutions-web.github.io/assets/pdfs/JobAd_Sen_Qual_Reg_Affairs_Specialist.pdf)
