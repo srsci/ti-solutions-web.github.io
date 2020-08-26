@@ -9,7 +9,7 @@
   body: |
    The neurostimulation devices under development will support both alternating current and TI stimulation, 
    multiple stimulation channels, a wide carrier-frequency range, flexible modulation, magnetic resonance imaging 
-   and electroencephalogram recording compatibility, and more. The preliminary specifications are listed here. 
+   and electroencephalogram recording compatibility, and more. The preliminary <a href="https://ti-solutions-web.github.io/specifications.html" target="_blank" >specifications</a> are listed <a href="https://ti-solutions-web.github.io/specifications.html" target="_blank" >here</a>. 
    
 - title: Treatment Planning Tools
   body: |
