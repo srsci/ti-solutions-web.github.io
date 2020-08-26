@@ -5,6 +5,10 @@
     by the creators of the TI concept in collaboration with <a href="https://www.z43.swiss/" target="_blank" >Z43</a> 
     to specifically foster TI research.
 
+- title: TI Devices
+  body: |
+   The neurostimulation devices under development will support both alternating current and TI stimulation, multiple stimulation channels, a wide carrier-frequency range, flexible modulation, magnetic resonance imaging and electroencephalogram recording compatibility, and more. The preliminary specifications are listed here. 
+    
 - title: The Science
   body: |
     Temporal Interference (TI) stimulation is a non-invasive technique which uses scalp electrodes to apply electrical 
@@ -41,12 +45,6 @@
 
     Grossman N, Bono D, Dedic N, et al. *Noninvasive Deep Brain Stimulation via Temporally Interfering Electric Fields.* Cell. 2017;169(6):1029‐1041.e16. doi:10.1016/j.cell.2017.05.024
 
-
-- title: TI Devices
-  body: |
-    The neurostimulation devices under development will support both alternating current and TI stimulation, 
-    multiple stimulation channels, a wide carrier-frequency range, flexible modulation, magnetic resonance 
-    imaging and electroencephalogram recording compatibility, and more. The preliminary specifications are listed here. 
 
 - title: Treatment Planning Tools
   body: |
