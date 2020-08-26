@@ -7,19 +7,36 @@
 
 - title: TI Devices
   body: |
-   The neurostimulation devices under development will support both alternating current and TI stimulation, multiple stimulation channels, a wide carrier-frequency range, flexible modulation, magnetic resonance imaging and electroencephalogram recording compatibility, and more. The preliminary specifications are listed here. 
+   The neurostimulation devices under development will support both alternating current and TI stimulation, 
+   multiple stimulation channels, a wide carrier-frequency range, flexible modulation, magnetic resonance imaging 
+   and electroencephalogram recording compatibility, and more. The preliminary specifications are listed here. 
+   
+- title: Treatment Planning Tools
+  body: |
+   The treatment planning tool will provide high-quality visualization and optimization of alternating current and 
+   TI stimulation configurations based on electromagnetic simulations involving detailed, high resolution representations 
+   of head anatomies of both, humans and animals. Thanks to a state-of-the-art cloud-based modelling platform, simulations 
+   of complex and realistic setups can be performed without specialized soft- or hardware. A particular focus is placed 
+   on flexibility with regard to optimization criteria (for scientific exploration), good user guidance, and powerful visualization. 
+   In 2021, personalized treatment modelling will be added that allows the modeling of any anatomy as well as any electrode shape and placement.
+   
+- title: Services
+  body: |
+   Our Team will provide all engineering services required for the optimal application of the developed TI devices and 
+   treatment planning tools, such as trouble shooting support, replacement of defective devices, and repairs. 
+   We are happy to contribute in drafting research proposals and perform simulation for the treatment planning if required. 
+   We are also interested to discuss and, if feasible, implement additional features into our devices and software tools
     
 - title: The Science
   body: |
-    Temporal Interference (TI) stimulation is a non-invasive technique which uses scalp electrodes to apply electrical 
-    interfering high-frequency currents to reach structures deep inside the brain. While the applied frequencies of the 
-    electric fields themselves are too high to induce neural firing, the frequency of the envelop can drive neural activity. 
-    This new concept holds great promise for both research and the clinics as it may open new experimental opportunities and 
-    may be used for selective deep brain stimulation to treat certain disorders without the necessity of surgically implanting 
-    electrodes within certain brain areas as is still common practice today.
-    
-    Grossman N, Bono D, Dedic N, et al. *Noninvasive Deep Brain Stimulation via Temporally Interfering Electric Fields.* 
-    Cell. 2017;169(6):1029‐1041.e16. doi:10.1016/j.cell.2017.05.024
+   Temporal Interference (TI) stimulation is a non-invasive technique which uses scalp electrodes to apply electrical interfering 
+   high-frequency currents to reach structures deep inside the brain. While the applied frequencies of the electric fields themselves 
+   are too high to induce neural firing, the frequency of the envelop can drive neural activity. This new concept holds great promise 
+   for both research and the clinics as it may open new experimental opportunities and may be used for selective deep brain stimulation 
+   to treat certain disorders without the necessity of surgically implanting electrodes within certain brain areas as is still common practice today. 
+ 
+   Grossman N, Bono D, Dedic N, et al. *Noninvasive Deep Brain Stimulation via Temporally Interfering Electric Fields.* 
+   Cell. 2017;169(6):1029‐1041.e16. doi:10.1016/j.cell.2017.05.024
 
 - title: References
   body: |
@@ -45,22 +62,3 @@
 
     Grossman N, Bono D, Dedic N, et al. *Noninvasive Deep Brain Stimulation via Temporally Interfering Electric Fields.* Cell. 2017;169(6):1029‐1041.e16. doi:10.1016/j.cell.2017.05.024
 
-
-- title: Treatment Planning Tools
-  body: |
-    The treatment planning tool will provide high-quality visualization and optimization of alternating current 
-    and TI stimulation configurations based on electromagnetic simulations involving detailed, high resolution 
-    representations of head anatomies of both, humans and animals. Thanks to a state-of-the-art cloud-based 
-    modelling platform, simulations of complex and realistic setups can be performed without specialized 
-    soft- or hardware. A particular focus is placed on flexibility with regard to optimization criteria 
-    (for scientific exploration), good user guidance, and powerful visualization. In 2021, personalized 
-    treatment modelling will be added that allows the modeling of any anatomy as well as any electrode shape and placement.
-
-    
-- title: Services
-  body: |
-    Our Team will provide all engineering services required for the optimal application of the developed TI devices 
-    and treatment planning tools, such as trouble shooting support, replacement of defective devices, and repairs. 
-    We are happy to contribute in drafting research proposals and perform simulation for the treatment planning 
-    if required. We are also interested to discuss and, if feasible, implement additional features into our devices 
-    and software tools.
