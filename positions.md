@@ -40,8 +40,8 @@ TI Solutions AG develops high-quality and flexible stimulation devices and treat
 
 Applications will be accepted until the position is filled. Direct applications are preferred; applications submitted via recruitment agencies are discouraged. Please note that incomplete applications will be disregarded.
 
-Please send your application documents (in English) consisting of motivational letter, detailed CV (max 2 pages), diplomas, transcripts (with grades), work certificates and/or reference letters (if available) to: <br>Zurich43, Yvonne Maeder, Zeughausstrasse 43, 8004 
-Zurich, Switzerland, Phone: +41 44 245 96 96, <jobs@z43.swiss>
+Please send your application documents (in English) consisting of motivational letter, detailed CV (max 2 pages), diplomas, transcripts (with grades), work certificates and/or reference letters (if available) to: <br>Zurich43, Yvonne Maeder, Zeughausstrasse 43, 8004 &nbsp; Zurich, 
+Switzerland, Phone: +41 44 245 96 96, <jobs@z43.swiss>
 <br>Informal enquiries are welcome and should be directed to Dr. Sabine Regel <regel@ti-solutions.swiss>.
 
 [Download as Pdf](../assets/pdfs/JobAd_Sen_Qual_Reg_Affairs_Specialist.pdf)
