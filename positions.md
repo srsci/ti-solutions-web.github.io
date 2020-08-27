@@ -43,7 +43,6 @@ Applications will be accepted until the position is filled. Direct applications 
 Please send your application documents (in English) consisting of motivational letter, detailed CV (max 2 pages), diplomas, transcripts (with grades), work certificates and/or reference letters (if available) to: Zurich43, Yvonne Maeder, Zeughausstrasse 43, 8004 
 
 Zurich, Switzerland, Phone: +41 44 245 96 96, <jobs@z43.swiss>
-
-Informal enquiries are welcome and should be directed to Dr. Sabine Regel <regel@ti-solutions.swiss>.
+<br>Informal enquiries are welcome and should be directed to Dr. Sabine Regel <regel@ti-solutions.swiss>.
 
 [Download as Pdf](../assets/pdfs/JobAd_Sen_Qual_Reg_Affairs_Specialist.pdf)
