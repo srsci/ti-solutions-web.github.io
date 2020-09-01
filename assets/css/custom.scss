@@ -14,12 +14,12 @@ $ti-color-dark-blue: #1b3764;
     }
 }
 
-.uk-offcanvas a {
-    color: $ti-color-dark-blue;
-    h3 {
-	margin-top: 20px;
-	margin-bottom: 10px;
-    }
+.uk-offcanvas h3 {
+   margin-top: 20px;
+   margin-bottom: 10px;
+   a {
+     color: $ti-color-dark-blue;
+   }
 }
 
 nav.uk-active li a {
