@@ -10,7 +10,41 @@
    The neurostimulation devices under development will support both alternating current and TI stimulation, 
    multiple stimulation channels, a wide carrier-frequency range, flexible modulation, magnetic resonance imaging 
    and electroencephalogram recording compatibility, and more. The preliminary <a href="../specifications.html" >specifications</a> are listed <a href="https://ti-solutions-web.github.io/specifications.html" >here</a>. 
-   
+ 
+- title: Specifications
+  closed: true
+  body:
+  list:
+    - Frequency range: DC - 100kHz
+    - Output voltage: ~30V (60V differential)
+    - Output current: 10mA max differential (load capacitance compensation)
+    - Battery - run time: ">6 hrs active time"
+    - Charging: USB C
+    - Number of channels per unit: 8 fully differential 1
+    - Trigger/Sync Output: external instrument and slave synchronization
+    - Sample rate: 1Msps
+    - Waveforms: sinusoid, phase modulation, frequency modulation, AWG
+    - AWG Memory depth: ">2M samples (2 seconds)"
+    - Dynamic range: ">60dB (10µA to 10mA) Humans"
+    - Precision / resolution: 16 bit, 1µs, synchronous update
+    - Harmonic and intermodulation Distortion: <0.05%
+    - Ground reference: yes
+    - Ground current monitoring: yes
+    - Monitoring - currents / voltages: yes synchronous sampling / logging of treatment
+    - Electrode impedance detection: yes
+    - Emergency Stop Button: yes
+    - current limit: frequency dependent current limit (latched)
+    - Trigger Input: yes (digital) Optically isolated
+    - EEG level output of excitation: yes
+    - Filtering - RF: yes LPF >30dB rejection plus traps
+    - Control unit: optical connection to control PC
+    - Firmware update: USB C
+    - Optical Serial Port: connecting to EEG instrument
+    - Environment: 3T MRI, +5 to +40°C
+    - Regulatory: FDA /
+    - Size: tbd
+    - Weight: tbd
+
 - title: Treatment Planning Tools
   body: |
    The treatment planning tool will provide high-quality visualization and optimization of alternating current and 
