@@ -7,7 +7,6 @@
     <div class="uk-navbar-right">
         <ul class="uk-navbar-nav">
             <li class="uk-visible@m"><a href="positions.html">Latest Jobs</a></li>
-            <li class="uk-visible@m"><a href="specifications.html">Specifications</a></li>
             <li><a href="#" uk-toggle="target: #offcanvas-reveal" uk-icon="icon: menu; ratio: 1.5"></a> </li>
         </ul>
     </div>
@@ -21,7 +20,7 @@ true">
         <h3><a href="/">Topics</a></h3>
         <ul class="uk-list">
             {% for topic in site.data.topics %}
-            <li><a class="uk-link-text"
+            <li><h3><a class="uk-link-text"
                 href="/#topic{{ forloop.index }}"
                 {% if page.name == 'index.html' %}uk-scroll="offset: 300"{% endif %}
                 uk-toggle="target: #offcanvas-reveal">{{ topic.title }}</a></li>
