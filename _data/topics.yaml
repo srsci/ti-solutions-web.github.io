@@ -20,7 +20,7 @@
     - Output current: 10mA max differential (load capacitance compensation)
     - Battery - run time: ">6 hrs active time"
     - Charging: USB C
-    - Number of channels per unit: 8 fully differential 1
+    - Number of channels per unit: 8 fully differential (extendable)
     - Trigger/Sync Output: external instrument and slave synchronization
     - Sample rate: 1Msps
     - Waveforms: sinusoid, phase modulation, frequency modulation, AWG
@@ -73,7 +73,8 @@
    Cell. 2017;169(6):1029‐1041.e16. doi:10.1016/j.cell.2017.05.024
 
 - title: References
-  body: |
+  closed: true
+  body:
     Alekseichuk I, Mantell K, Shirinpour S, Opitz A. *Comparative modeling of transcranial magnetic and electric stimulation in mouse, monkey, and human.* Neuroimage. 2019;194:136‐148. doi:10.1016/j.neuroimage.2019.03.044
 
     Huang Y, Parra LC. *Can transcranial electric stimulation with multiple electrodes reach deep targets?* Brain Stimul. 2019;12(1):30‐40. doi:10.1016/j.brs.2018.09.010
