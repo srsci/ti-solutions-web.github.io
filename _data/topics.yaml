@@ -15,6 +15,7 @@
   closed: true
   button: Details
   teaser: Continuously updated information about our TI Devices can be found here.
+   <h4 {Spefications}</h4>
   list:
     - Frequency range: DC - 100kHz
     - Output voltage: ~30V (60V differential)
