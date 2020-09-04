@@ -13,7 +13,8 @@
  
 - title: Specifications
   closed: true
-  body:
+  button: See Detailed Specifications
+  teaser: A little teaser text
   list:
     - Frequency range: DC - 100kHz
     - Output voltage: ~30V (60V differential)
@@ -74,7 +75,8 @@
 
 - title: References
   closed: true
-  body:
+  teaser: A little teaser text
+  body: |
     Alekseichuk I, Mantell K, Shirinpour S, Opitz A. *Comparative modeling of transcranial magnetic and electric stimulation in mouse, monkey, and human.* Neuroimage. 2019;194:136‐148. doi:10.1016/j.neuroimage.2019.03.044
 
     Huang Y, Parra LC. *Can transcranial electric stimulation with multiple electrodes reach deep targets?* Brain Stimul. 2019;12(1):30‐40. doi:10.1016/j.brs.2018.09.010

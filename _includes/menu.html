@@ -21,7 +21,7 @@ true">
             {% for topic in site.data.topics %}
             <li><h3><a class="uk-link-text"
                 href="/#topic{{ forloop.index }}"
-                {% if page.name == 'index.html' %}uk-scroll="offset: 300"{% endif %}
+                {% if page.name == 'index.html' %}uk-scroll="offset: 120"{% endif %}
                 uk-toggle="target: #offcanvas-reveal">{{ topic.title }}</a></li>
             {% endfor %}
         </ul>

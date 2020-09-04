@@ -8,7 +8,30 @@ layout: plain
     <div class="uk-grid-collapse uk-flex-right@s uk-margin-large-bottom" uk-grid>
         <div class="ti-topic uk-width-1-2@s box">
             <h3 id="topic{{ forloop.index }}">{{ topic.title }}</h3>
-            {{ topic.body | markdownify }}
+            {% if topic.closed %}
+            <div class="ttarg{{ forloop.index }}">
+                <button style="float: right; margin-left: 3ex;" 
+                    class="uk-button" uk-toggle="target: .ttarg{{ forloop.index }};animation: uk-animation-slide-top-small;">{% if topic.button %}{{ topic.button }}{% else %}Learn more{% endif %}</button>
+                {% if topic.teaser %}
+                <div>{{topic.teaser}}</div>
+                {% endif %}
+            </div>
+            {% endif %}
+            <div class="ttarg{{ forloop.index }}" {% if topic.closed %}hidden{% endif %}>
+            {% if topic.body %}
+                {{ topic.body | markdownify }}
+            {% endif %}
+            {% if topic.list %}
+            <table class="uk-table uk-table-striped uk-table-small">
+                {% for spec in topic.list %}
+                    {% for item in spec %}
+                        <tr><td>{{ item[0] }}</td>
+                            <td class="uk-table-expand">{{ item[1] }}</td></tr>
+                    {% endfor %}
+                {% endfor %}
+                </table>
+            {% endif %}
+            </div>
         </div>
     </div>
     {% endfor %}
