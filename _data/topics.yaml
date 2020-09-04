@@ -15,8 +15,8 @@
   closed: true
   button: Details
   teaser: Continuously updated information about our TI Devices can be found here.
-   <h4 {Spefications}</h4>
   list:
+    - Specifications:
     - Frequency range: DC - 100kHz
     - Output voltage: ~30V (60V differential)
     - Output current: 10mA max differential (load capacitance compensation)
