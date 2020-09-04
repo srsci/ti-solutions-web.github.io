@@ -1,4 +1,4 @@
-- title: The Company
+S- title: The Company
   body: |
     TI Solutions AG develops high-quality and flexible stimulation devices and treatment planning tools 
     for temporal interference (TI) research. The company was founded in December 2019 in Zurich, Switzerland, 
@@ -13,8 +13,8 @@
  
 - title: Specifications
   closed: true
-  button: See Detailed Specifications
-  teaser: A little teaser text
+  button: Device Specs
+  teaser: Continuously updated information about our TI Devices can be found here.
   list:
     - Frequency range: DC - 100kHz
     - Output voltage: ~30V (60V differential)
@@ -75,7 +75,7 @@
 
 - title: References
   closed: true
-  teaser: A little teaser text
+  teaser: The latest publications on TI can be found here
   body: |
     Alekseichuk I, Mantell K, Shirinpour S, Opitz A. *Comparative modeling of transcranial magnetic and electric stimulation in mouse, monkey, and human.* Neuroimage. 2019;194:136‐148. doi:10.1016/j.neuroimage.2019.03.044
 
@@ -99,3 +99,9 @@
 
     Grossman N, Bono D, Dedic N, et al. *Noninvasive Deep Brain Stimulation via Temporally Interfering Electric Fields.* Cell. 2017;169(6):1029‐1041.e16. doi:10.1016/j.cell.2017.05.024
 
+
+- title: Funding Opportinuties
+  closed: true
+  teaser: The latest fupdates on research projects and funding can be found here:
+  body: |
+   
