@@ -15,7 +15,7 @@
   closed: true
   button: Details
   teaser: Continuously updated information about our TI Devices can be found here.
-   <h4 class="person-name" >{{ person.name }}</h4>
+   <h4 {Specifications}</h4>
   list:
     - Specifications:
     - Frequency range: DC - 100kHz
