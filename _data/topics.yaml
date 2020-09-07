@@ -51,8 +51,8 @@
 - title: Treatment Planning Tools
   body: |
    The treatment planning tools will provide high-quality visualization and optimization of alternating current and 
-   TI stimulation configurations based on electromagnetic simulations involving detailed, high resolution representations 
-   of head anatomies of both, humans and animals. Thanks to a state-of-the-art cloud-based modelling platform, simulations 
+   TI stimulation configurations based on electromagnetic simulations involving detailed, high-resolution representations 
+   of head anatomies of both humans and animals. Thanks to a state-of-the-art cloud-based modelling platform, simulations 
    of complex and realistic setups can be performed without specialized soft- or hardware. A particular focus is placed 
    on flexibility with regard to optimization criteria (for scientific exploration), good user guidance, and powerful visualization. 
    In 2021, personalized treatment modelling will be added that allows the modeling of any anatomy as well as any electrode shape and placement.
@@ -61,8 +61,8 @@
   body: |
    Our Team will provide all engineering services required for the optimal application of the developed TI devices and 
    treatment planning tools, such as trouble shooting support, replacement of defective devices, and repairs. 
-   We are happy to contribute in drafting research proposals and perform simulation for the treatment planning if required. 
-   We are also interested to discuss and, if feasible, implement additional features into our devices and software tools
+   We are happy to contribute in drafting research proposals and perform simulations for the treatment planning if required. 
+   We are also interested to discuss and, if feasible, implement additional features into our devices and software tools.
     
 - title: The Science
   body: |
