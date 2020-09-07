@@ -50,7 +50,7 @@
 
 - title: Treatment Planning Tools
   body: |
-   The treatment planning tool will provide high-quality visualization and optimization of alternating current and 
+   The treatment planning tools will provide high-quality visualization and optimization of alternating current and 
    TI stimulation configurations based on electromagnetic simulations involving detailed, high resolution representations 
    of head anatomies of both, humans and animals. Thanks to a state-of-the-art cloud-based modelling platform, simulations 
    of complex and realistic setups can be performed without specialized soft- or hardware. A particular focus is placed 
@@ -106,7 +106,7 @@
 - title: News
   closed: true
   button: List
-  teaser: Important updates and developments on TI stiumlation related research can be found here
+  teaser: Important updates and developments on TI stimulation related research can be found here
   body: |
     August, 27, 2020*:* A team of researchers led by Dr Nir Grossman, UK DRI at Imperial College London, received an important award to accelerate the application of a new non-invasive deep brain stimulation therapy for people with Alzheimer’s disease <a href="https://ukdri.ac.uk/news-and-events/uk-dri-researcher-awarded-1-5-million-to-trial-deep-brain-stimulation-therapy" >More details</a>. 
 
