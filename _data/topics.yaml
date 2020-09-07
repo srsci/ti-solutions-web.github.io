@@ -14,7 +14,7 @@
 - title: Device Description
   closed: true
   button: Details
-  teaser: Continuously updated information about our TI Devices can be found here.
+  teaser: Continuously updated information about our TI devices can be found here.
    <h4 {Specifications}</h4>
   list:
     - Specifications:
